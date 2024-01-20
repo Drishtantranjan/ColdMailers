@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../auth/presentation/views/auth_screen.dart';
+import '../../../auth/presentation/views/login_screen.dart';
 import '../../data/onboading_data.dart';
 
 class Onboarding extends StatefulWidget {
@@ -109,7 +109,7 @@ class _OnboardingState extends State<Onboarding> {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => AuthScreen(),
+                        builder: (_) => LoginScreen(),
                       ),
                     );
                   }

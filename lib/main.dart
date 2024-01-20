@@ -1,4 +1,5 @@
 import 'package:cold_mailing/onboarding/presentation/views/onboarding_screen.dart';
+import 'package:cold_mailing/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
 
         ),
-        home:  Onboarding(),
+        home:  VideoWidget(),
       ),
     );
   }
