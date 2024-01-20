@@ -1,34 +1,37 @@
-import 'package:cold_mailing/auth/presentation/views/sign_up_screen.dart';
-import 'package:cold_mailing/onboarding/presentation/views/onboarding_screen.dart';
-import 'package:cold_mailing/utils/FormField.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:cold_mailing/utils/Background_Container.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:text_divider/text_divider.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key});
+import '../../../../core/utils/Background_Container.dart';
+import '../../../../core/utils/FormField.dart';
+import '../../../onboarding/presentation/views/onboarding_screen.dart';
+import 'login_screen.dart';
+
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
+    final TextEditingController confirmPasswordController = TextEditingController();
+    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        systemOverlayStyle: const SystemUiOverlayStyle(
+        systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
           statusBarIconBrightness: Brightness.light,
           statusBarBrightness: Brightness.light,
         ),
       ),
       body: BackgroundContainer(
-        imageProvider: const AssetImage("assets/icons/auth/bg_auth.png"),
+        imageProvider: AssetImage("assets/icons/auth/bg_auth.png"),
         child: Padding(
           padding: EdgeInsets.all(20.sp),
           child: SingleChildScrollView(
@@ -37,26 +40,23 @@ class LoginScreen extends StatelessWidget {
               child: Column(
                 children: [
                   150.verticalSpace,
-                  const Text(
-                    "COLD MAILERS",
+                  Text(
+                    "Create an account",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-
-                  const Text(
-                    "Create Your Own Opportunities",
+                  Text(
+                    "Craft your future ooportunites & Build Your Path to Success",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 10,
                       fontStyle: FontStyle.italic,
+                      fontSize: 10,
                       fontWeight: FontWeight.normal,
                     ),
                   ),
-
-
                   50.verticalSpace,
                   FormFieldWidget<String>(
                     controller: emailController,
@@ -87,6 +87,20 @@ class LoginScreen extends StatelessWidget {
                       return null;
                     },
                   ),
+                  10.verticalSpace,
+                  FormFieldWidget<String>(
+                    controller: confirmPasswordController,
+                    hint_text: "Confirm Password",
+                    validator: (value) {
+                    if (value == null || value.isEmpty) {
+                    return 'Confirm Password cannot be empty';
+                    } else if (value != passwordController.text) {
+                      return 'Passwords do not match';
+                   }
+                  return null;
+                 },
+
+                  ),
                   30.verticalSpace,
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -97,15 +111,15 @@ class LoginScreen extends StatelessWidget {
                         0.1.horizontalSpace,
                         TextButton(
                           onPressed: () {
-                            Navigator.push(
+                            Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder: (_) => const SignupScreen(),
+                                builder: (context) => LoginScreen(),
                               ),
                             );
                           },
-                          child: const Text(
-                            "SignUp",
+                          child: Text(
+                            "Login",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -117,9 +131,9 @@ class LoginScreen extends StatelessWidget {
                           height: 50.h,
                           child: ElevatedButton(
                             onPressed: () {
-
+                              // Validate the form
                               if (_formKey.currentState?.validate() ?? false) {
-
+                                // If validation passes, move to the new page
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
@@ -128,8 +142,8 @@ class LoginScreen extends StatelessWidget {
                                 );
                               }
                             },
-                            child: const Text(
-                              "Login",
+                            child: Text(
+                              "Sign up",
                               style: TextStyle(
                                 color: Color(0XFF020247),
                                 fontWeight: FontWeight.bold,
@@ -141,49 +155,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   30.verticalSpace,
-                  TextDivider.horizontal(
-                    text: const Text(
-                      'OR',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    color: Colors.white,
-                    thickness: 2.0,
-                  ),
-                  40.verticalSpace,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CircleAvatar(
-                        radius: 30.r,
-                        backgroundColor: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: SvgPicture.asset(
-                              "assets/icons/auth/ic_google.svg"),
-                        ),
-                      ),
-                      20.horizontalSpace,
-                      CircleAvatar(
-                        radius: 30.r,
-                        backgroundColor: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: SvgPicture.asset(
-                              "assets/icons/auth/ic_linkedin.svg"),
-                        ),
-                      ),
-                      20.horizontalSpace,
-                      CircleAvatar(
-                        radius: 30.r,
-                        backgroundColor: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: SvgPicture.asset(
-                              "assets/icons/auth/ic_github.svg"),
-                        ),
-                      ),
-                    ],
-                  )
+
                 ],
               ),
             ),

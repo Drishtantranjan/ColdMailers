@@ -1,16 +1,20 @@
-import 'package:cold_mailing/utils/Colors.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../gen/colors.gen.dart';
+
 class FormFieldWidget<T> extends StatelessWidget {
   final TextEditingController controller;
+  final bool? obscureText;
   final Color? borderColor;
   final String? hint_text;
   final FocusNode? focusNode;
   final String? Function(T?)? validator;
 
-  FormFieldWidget({
+  const FormFieldWidget({
     Key? key,
+    this.obscureText,
     required this.controller,
     this.hint_text,
     this.validator,
@@ -31,7 +35,8 @@ class FormFieldWidget<T> extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(5.0.sp),
       child: TextFormField(
-        controller: controller, // Use the provided controller
+        obscureText: obscureText ?? false,
+        controller: controller,
         decoration: InputDecoration(
           filled: true,
           fillColor: AppColors.white,

@@ -1,3 +1,4 @@
+import 'package:cold_mailing/gen/assets.gen.dart';
 import 'package:cold_mailing/onboarding/presentation/views/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
@@ -13,12 +14,12 @@ class _VideoWidgetState extends State<VideoWidget> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('assets/Splash/Splash_Screen.mp4')
+
+    _controller = VideoPlayerController.asset(Assets.splash.splashScreen)
       ..initialize().then((_) {
         _controller.setVolume(0.0);
         _controller.setLooping(false);
         _controller.play();
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
       });
 
@@ -52,4 +53,3 @@ class _VideoWidgetState extends State<VideoWidget> {
     _controller.dispose();
   }
 }
-
