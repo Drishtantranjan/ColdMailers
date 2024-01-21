@@ -6,6 +6,7 @@ import 'package:text_divider/text_divider.dart';
 import '../../../../core/utils/Background_Container.dart';
 import '../../../../core/utils/FormField.dart';
 import '../../../../gen/assets.gen.dart';
+import '../../../dashboard/presentation/view/home.dart';
 import '../../../onboarding/presentation/views/onboarding_screen.dart';
 import 'sign_up_screen.dart';
 
@@ -120,7 +121,7 @@ class LoginScreen extends StatelessWidget {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => Onboarding(),
+                                    builder: (context) => Homepage(),
                                   ),
                                 );
                               // }
