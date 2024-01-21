@@ -23,6 +23,7 @@ class $AssetsIconsGen {
   const $AssetsIconsGen();
 
   $AssetsIconsAuthGen get auth => const $AssetsIconsAuthGen();
+  $AssetsIconsHomeGen get home => const $AssetsIconsHomeGen();
   $AssetsIconsOnboardingGen get onboarding => const $AssetsIconsOnboardingGen();
 }
 
@@ -72,6 +73,17 @@ class $AssetsIconsAuthGen {
         icLogin,
         linkedin
       ];
+}
+
+class $AssetsIconsHomeGen {
+  const $AssetsIconsHomeGen();
+
+  /// File path: assets/icons/home/ic_floatingBtn.png
+  AssetGenImage get icFloatingBtn =>
+      const AssetGenImage('assets/icons/home/ic_floatingBtn.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [icFloatingBtn];
 }
 
 class $AssetsIconsOnboardingGen {

@@ -1,70 +1,74 @@
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:cold_mailing/core/utils/bottomNavBar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/utils/Colors.dart';
 import '../../../../core/utils/appBar.dart';
+import '../../../../gen/colors.gen.dart';
 
 
-class Homepage extends StatelessWidget {
-  const Homepage({Key? key});
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.background,
-      appBar: CustomBarWidget(),
-      body: SingleChildScrollView(
-        child: Column(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: AppColors.background,
+        appBar: CustomBarWidget(),
+        body: Column(
           children: [
-            // Add your content widgets here
-            Text('Hello, World!'),
-            // Add more widgets as needed
+            const Divider(
+              height: 1,
+              thickness: 1,
+            ),
+            Expanded(
+              child: _getBodyContent(_currentIndex),
+            ),
+            const Divider(
+              height: 1,
+              thickness: 1,
+            )
           ],
         ),
-      ),
-      bottomNavigationBar: AnimatedBottomNavigationBar.builder(
-        itemCount: 5, // Set the number of items in the bottom navigation bar
-        tabBuilder: (index, isActive) {
-          // Customize the icon based on isActive
-          return Icon(
-            getIconForIndex(index), // Replace with your own logic to get icons for each index
-            color: isActive ? AppColors.linearProgressColor : AppColors.buttonPrimaryText,
-          );
-        },
-        activeIndex: 0, // Set the initial active index
-        gapLocation: GapLocation.center, // Adjust as needed
-        notchSmoothness: NotchSmoothness.smoothEdge, // Adjust as needed
-        onTap: (index) {
-          handleNavigation(index); // Implement your own logic for handling navigation
-        },
-        backgroundColor: AppColors.background, // Set the background color
-        // activeColor: AppColors.linearProgressColor, // Set the active color
+        bottomNavigationBar: CustomBottomNavigationBar(
+          currentIndex: _currentIndex,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+        ),
       ),
     );
   }
 
-  IconData getIconForIndex(int index) {
-    // Implement your own logic to map index to icons
-    switch (index) {
+  Widget _getBodyContent(int currentIndex) {
+    switch (currentIndex) {
       case 0:
-        return Icons.home;
+        return const Center(
+          child: Text('Home Page'),
+        );
       case 1:
-        return Icons.search;
+        return const Center(
+          child: Text('Template Page'),
+        );
       case 2:
-        return Icons.favorite;
+        return const Center(
+          child: Text('Post Page'),
+        );
       case 3:
-        return Icons.notifications;
+        return Container();
       case 4:
-        return Icons.person;
+        return const Center(
+          child: Text('Settings Page'),
+        );
       default:
-        return Icons.home;
+        return Container();
     }
-  }
-
-  void handleNavigation(int index) {
-    // Implement your own logic for handling navigation
-    // You can use Navigator or any other navigation mechanism here
-    print('Navigating to index: $index');
   }
 }

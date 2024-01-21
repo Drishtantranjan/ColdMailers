@@ -29,7 +29,7 @@ class _VideoWidgetState extends State<VideoWidget> {
         // Video has completed, navigate to the new screen
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
-            builder: (context) => Homepage(),
+            builder: (context) => HomePage(),
           ),
         );
       }
