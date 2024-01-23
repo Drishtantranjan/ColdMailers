@@ -16,8 +16,14 @@ class AppColors {
   /// Color: #EBE7E2
   static const Color beige3 = Color(0xFFEBE7E2);
 
+  /// Color: #EEF3F8
+  static const Color appbar = Color(0xFFEEF3F8);
+
   /// Color: #F3F3F3
   static const Color background = Color(0xFFF3F3F3);
+
+  /// Color: #E9E5DF
+  static const Color background2 = Color(0xFFE9E5DF);
 
   /// Color: #000000
   static const Color black = Color(0xFF000000);

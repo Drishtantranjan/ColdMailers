@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="form_light">#EBE7E2</color>
-
+    <color name="appbar">#EEF3F8</color>
     <color name="primary_color">#241C41</color>
     <color name="form">#838383</color>
     <color name="black12">#1F000000</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="background">#F3F3F3</color>
+    <color name="background2">#E9E5DF</color>
     <color name="gray_70">#EEEEEE</color>
     <color name="gray_410">#979797</color>
     <color name="black_titles">#202020</color>
