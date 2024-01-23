@@ -78,12 +78,63 @@ class $AssetsIconsAuthGen {
 class $AssetsIconsHomeGen {
   const $AssetsIconsHomeGen();
 
-  /// File path: assets/icons/home/ic_floatingBtn.png
-  AssetGenImage get icFloatingBtn =>
-      const AssetGenImage('assets/icons/home/ic_floatingBtn.png');
+  /// File path: assets/icons/home/dummy_image.jpg
+  AssetGenImage get dummyImage =>
+      const AssetGenImage('assets/icons/home/dummy_image.jpg');
+
+  /// File path: assets/icons/home/ic_home.svg
+  String get icHome => 'assets/icons/home/ic_home.svg';
+
+  /// File path: assets/icons/home/ic_homeAct.gif
+  AssetGenImage get icHomeAct =>
+      const AssetGenImage('assets/icons/home/ic_homeAct.gif');
+
+  /// File path: assets/icons/home/ic_resume.png
+  AssetGenImage get icResume =>
+      const AssetGenImage('assets/icons/home/ic_resume.png');
+
+  /// File path: assets/icons/home/ic_resumeAct.gif
+  AssetGenImage get icResumeAct =>
+      const AssetGenImage('assets/icons/home/ic_resumeAct.gif');
+
+  /// File path: assets/icons/home/ic_saved.png
+  AssetGenImage get icSaved =>
+      const AssetGenImage('assets/icons/home/ic_saved.png');
+
+  /// File path: assets/icons/home/ic_savedAct.gif
+  AssetGenImage get icSavedAct =>
+      const AssetGenImage('assets/icons/home/ic_savedAct.gif');
+
+  /// File path: assets/icons/home/ic_template.png
+  AssetGenImage get icTemplate =>
+      const AssetGenImage('assets/icons/home/ic_template.png');
+
+  /// File path: assets/icons/home/ic_templateAct.gif
+  AssetGenImage get icTemplateAct =>
+      const AssetGenImage('assets/icons/home/ic_templateAct.gif');
+
+  /// File path: assets/icons/home/ic_top.png
+  AssetGenImage get icTop =>
+      const AssetGenImage('assets/icons/home/ic_top.png');
+
+  /// File path: assets/icons/home/ic_topAct.gif
+  AssetGenImage get icTopAct =>
+      const AssetGenImage('assets/icons/home/ic_topAct.gif');
 
   /// List of all assets
-  List<AssetGenImage> get values => [icFloatingBtn];
+  List<dynamic> get values => [
+        dummyImage,
+        icHome,
+        icHomeAct,
+        icResume,
+        icResumeAct,
+        icSaved,
+        icSavedAct,
+        icTemplate,
+        icTemplateAct,
+        icTop,
+        icTopAct
+      ];
 }
 
 class $AssetsIconsOnboardingGen {
