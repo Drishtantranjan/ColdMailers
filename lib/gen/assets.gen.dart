@@ -25,6 +25,7 @@ class $AssetsIconsGen {
   $AssetsIconsAuthGen get auth => const $AssetsIconsAuthGen();
   $AssetsIconsHomeGen get home => const $AssetsIconsHomeGen();
   $AssetsIconsOnboardingGen get onboarding => const $AssetsIconsOnboardingGen();
+  $AssetsIconsTopGen get top => const $AssetsIconsTopGen();
 }
 
 class $AssetsIconsAuthGen {
@@ -151,6 +152,16 @@ class $AssetsIconsOnboardingGen {
 
   /// List of all assets
   List<String> get values => [icOnboarding1, icOnboarding2, icOnboarding3];
+}
+
+class $AssetsIconsTopGen {
+  const $AssetsIconsTopGen();
+
+  /// File path: assets/icons/top/bg_top.gif
+  AssetGenImage get bgTop => const AssetGenImage('assets/icons/top/bg_top.gif');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [bgTop];
 }
 
 class Assets {

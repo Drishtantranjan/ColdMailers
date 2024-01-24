@@ -1,5 +1,7 @@
 import 'package:cold_mailing/src/dashboard/presentation/view/HomePage.dart';
+import 'package:cold_mailing/src/top/presentation/views/top.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../widgets/appBar.dart';
 import '../../../../gen/colors.gen.dart';
 import '../widgets/bottomNavBar.dart';
@@ -22,7 +24,7 @@ class _HomeState extends State<Home> {
       child: WillPopScope(
         onWillPop: () async {
           if (isTextFieldTapped) {
-            // If TextField is tapped, hide the keyboard and set isTextFieldTapped to false
+
             setState(() {
               isTextFieldTapped = false;
             });
@@ -93,9 +95,45 @@ class _HomeState extends State<Home> {
             child: Text('Template Page'),
           );
         case 2:
-          return const Center(
-            child: Text('Post Page'),
-          );
+          WidgetsBinding.instance!.addPostFrameCallback((_) {
+
+            showModalBottomSheet(
+
+              context: context,
+              builder: (BuildContext context) {
+                return Container(
+                  color: AppColors.white,
+                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
+                  // color: AppColors.white,
+                  child:  Column(
+
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      30.verticalSpace,
+                      IconButton(
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => Home(),
+                            ),
+                          );
+                        },
+                        icon: Icon(Icons.close),
+                       // An empty Text widget for an empty label
+                      )
+                    ],
+                  )
+                );
+              },
+              isDismissible: false,
+              isScrollControlled: true,
+              enableDrag: false,
+            );
+          });
+
+
+          return Container();
         case 3:
           return Container();
         case 4:
