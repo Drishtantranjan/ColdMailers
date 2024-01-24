@@ -35,8 +35,23 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+        Container(
+        margin: EdgeInsets.symmetric(vertical: 0.0,),
+        child: showShimmer
+            ? ShimmerContainer(
+          height: MediaQuery.of(context).size.height * 0.35,
+          shimmerDuration: Duration(milliseconds: 200),
+        )
+            : Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height * 0.35,
 
-
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(0)
+          ),
+        ),
+      ),
             5.verticalSpace,
             ListView.builder(
               shrinkWrap: true,
@@ -44,19 +59,20 @@ class _HomePageState extends State<HomePage> {
               itemCount: 10,
               itemBuilder: (context, index) {
                 return Container(
-                  margin: EdgeInsets.symmetric(vertical: 5.0,horizontal: 10),
+                  margin: EdgeInsets.symmetric(vertical: 5.0,),
                   child: showShimmer
                       ? ShimmerContainer(
-                    height: MediaQuery.of(context).size.height * 0.4,
+                    borderRadius: BorderRadius.circular(0),
+                    height: MediaQuery.of(context).size.height * 0.35,
                     shimmerDuration: Duration(milliseconds: 200),
                   )
                       : Container(
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.4,
+                    height: MediaQuery.of(context).size.height * 0.35,
 
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)
+                      borderRadius: BorderRadius.circular(0)
                     ),
                   ),
                 );

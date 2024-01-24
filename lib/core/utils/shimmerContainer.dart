@@ -7,8 +7,9 @@ import '../../../../gen/colors.gen.dart';
 class ShimmerContainer extends StatefulWidget {
   final double height;
   final Duration shimmerDuration;
+  final BorderRadius? borderRadius;
 
-  ShimmerContainer({required this.height, required this.shimmerDuration});
+  ShimmerContainer({required this.height, required this.shimmerDuration, this.borderRadius});
 
   @override
   _ShimmerContainerState createState() => _ShimmerContainerState();
@@ -17,6 +18,7 @@ class ShimmerContainer extends StatefulWidget {
 class _ShimmerContainerState extends State<ShimmerContainer> with TickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _animation;
+
 
   @override
   void initState() {
@@ -57,7 +59,7 @@ class _ShimmerContainerState extends State<ShimmerContainer> with TickerProvider
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black),
               color: Color(0xFFC2C2C2),
-              borderRadius: BorderRadius.circular(10.0),
+              borderRadius:  widget.borderRadius,
             ),
           ),
         )
