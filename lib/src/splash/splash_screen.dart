@@ -2,6 +2,7 @@ import 'package:cold_mailing/gen/assets.gen.dart';
 
 import 'package:cold_mailing/src/dashboard/presentation/view/home.dart';
 import 'package:cold_mailing/src/onboarding/presentation/views/onboarding_screen.dart';
+import 'package:cold_mailing/src/top/presentation/widget/Card.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 

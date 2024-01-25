@@ -1,8 +1,11 @@
+import 'package:cold_mailing/core/utils/app_text.dart';
+import 'package:cold_mailing/gen/assets.gen.dart';
+import 'package:cold_mailing/src/top/presentation/widget/Card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shimmer/shimmer.dart';
-import '../../../../core/utils/shimmerContainer.dart';
 import '../../../../gen/colors.gen.dart';
+import '../../../dashboard/presentation/view/home.dart';
+
 
 class Top extends StatefulWidget {
   const Top({Key? key}) : super(key: key);
@@ -12,59 +15,153 @@ class Top extends StatefulWidget {
 }
 
 class _TopState extends State<Top> {
-  bool showShimmer = true;
-
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      showModalBottomSheet(
+        context: context,
+        builder: (BuildContext context) {
+          return Container(
+          
+            color: AppColors.white,
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 30.0),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => Home(),
+                        ),
+                      );
+                    },
+                    icon: Icon(Icons.close),
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: appTextS4("TOP VOICES")
+                  ),
+                  10.verticalSpace,
+                  Padding(
+                    padding: EdgeInsets.all(8),
+                    child : appTextS2("Google Developer Experts"),),
+                  5.verticalSpace,
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 8.0,),
+                    height: MediaQuery.of(context).size.height*0.28, // Adjust the height as needed
+                    child: ListView.builder(
+                      clipBehavior: Clip.none,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 8,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: CardWidget(
+                            title: "GDE",
+                            name: "Drishtant",
+                            summary: "I am passionate flutter developer holding 1.5 years of experience",
+                            avatarImage: AssetImage(
+                                Assets.icons.home.dummyImage.path),
+                            imageProvider: AssetImage(
+                                Assets.icons.top.bgTopCard2.path),
+                            child: Column(
+                              children: [
+                                // Your content for each card goes here
+                                Text("Card $index"),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  10.verticalSpace,
+                  Padding(
+                    padding: EdgeInsets.all(8),
+                    child : appTextS1("FAANG Career Experts"),),
+                  5.verticalSpace,
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 8.0,),
+                    height: MediaQuery.of(context).size.height*0.28, // Adjust the height as needed
+                    child: ListView.builder(
+                      clipBehavior: Clip.none,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 8,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: CardWidget(
+                            title: "GDE",
+                            name: "Drishtant",
+                            summary: "I am passionate flutter developer holding 1.5 years of experience",
+                            avatarImage: AssetImage(
+                                Assets.icons.home.dummyImage.path),
+                            imageProvider: AssetImage(
+                                Assets.icons.top.bgTopCard.path),
+                            child: Column(
+                              children: [
+                                // Your content for each card goes here
+                                Text("Card $index"),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8),
+                    child : appTextS2("Early Career Experts"),),
+                  5.verticalSpace,
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 8.0,),
+                    height: MediaQuery.of(context).size.height*0.28,
+                    child: ListView.builder(
+                      clipBehavior: Clip.none,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 8,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: CardWidget(
+                            title: "GDE",
+                            name: "Drishtant",
+                            summary: "I am passionate flutter developer holding 1.5 years of experience",
+                            avatarImage: AssetImage(
+                                Assets.icons.home.dummyImage.path),
+                            imageProvider: AssetImage(
+                                Assets.icons.top.bgTopCard3.path),
+                            child: Column(
+                              children: [
 
-    // After 2 seconds, update the state to hide the shimmer effect
-    Future.delayed(Duration(seconds: 2), () {
-      if (mounted) {
-        setState(() {
-          showShimmer = false;
-        });
-      }
+                                Text("Card $index"),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  50.verticalSpace
+                ],
+              ),
+            ),
+          );
+        },
+        isDismissible: false,
+        isScrollControlled: true,
+        enableDrag: false,
+      );
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.background2,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-
-
-            5.verticalSpace,
-            ListView.builder(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: 10,
-              itemBuilder: (context, index) {
-                return Container(
-                  margin: EdgeInsets.symmetric(vertical: 5.0,horizontal: 10),
-                  child: showShimmer
-                      ? ShimmerContainer(
-                    height: MediaQuery.of(context).size.height * 0.4,
-                    shimmerDuration: Duration(milliseconds: 200),
-                  )
-                      : Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.4,
-
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
-    );
+    return Container(); // Adjust as needed
   }
 }

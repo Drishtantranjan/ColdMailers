@@ -95,45 +95,7 @@ class _HomeState extends State<Home> {
             child: Text('Template Page'),
           );
         case 2:
-          WidgetsBinding.instance!.addPostFrameCallback((_) {
-
-            showModalBottomSheet(
-
-              context: context,
-              builder: (BuildContext context) {
-                return Container(
-                  color: AppColors.white,
-                  height: MediaQuery.of(context).size.height,
-                  width: MediaQuery.of(context).size.width,
-                  // color: AppColors.white,
-                  child:  Column(
-
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      30.verticalSpace,
-                      IconButton(
-                        onPressed: () {
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                              builder: (context) => Home(),
-                            ),
-                          );
-                        },
-                        icon: Icon(Icons.close),
-                       // An empty Text widget for an empty label
-                      )
-                    ],
-                  )
-                );
-              },
-              isDismissible: false,
-              isScrollControlled: true,
-              enableDrag: false,
-            );
-          });
-
-
-          return Container();
+          return Top();
         case 3:
           return Container();
         case 4:

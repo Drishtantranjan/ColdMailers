@@ -51,8 +51,8 @@ class _ShimmerContainerState extends State<ShimmerContainer> with TickerProvider
       builder: (context, child) {
         return _animation.value < 1.0
             ? Shimmer.fromColors(
-          baseColor: Color(0xFFC2C2C2),
-          highlightColor: Colors.grey,
+          baseColor: Color(0xFFE2DEDA),
+          highlightColor: Colors.white,
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: widget.height,

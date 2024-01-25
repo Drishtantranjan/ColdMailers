@@ -33,6 +33,11 @@ dependency_overrides:
 flutter_gen:
     output: lib/gen/
     line_length: 80
+
+
+    fonts:
+      outputs:
+        class_name: Fonts
     colors:
       outputs:
         class_name: AppColors
@@ -47,3 +52,11 @@ flutter:
     - assets/icons/home/
     - assets/icons/top/
     - assets/Splash/
+    - assets/fonts/
+  fonts:
+    - family: Sofia Pro
+      fonts:
+        - asset: assets/fonts/Sofia Pro Black.otf
+        - asset: assets/fonts/Sofia Pro Bold.otf
+
+

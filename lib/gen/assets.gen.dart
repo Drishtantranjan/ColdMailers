@@ -19,6 +19,198 @@ class $AssetsSplashGen {
   List<String> get values => [splashScreen];
 }
 
+class $AssetsFontsGen {
+  const $AssetsFontsGen();
+
+  /// File path: assets/fonts/Sofia Pro Black Condensed Italic.otf
+  String get sofiaProBlackCondensedItalic =>
+      'assets/fonts/Sofia Pro Black Condensed Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Black Condensed.otf
+  String get sofiaProBlackCondensed =>
+      'assets/fonts/Sofia Pro Black Condensed.otf';
+
+  /// File path: assets/fonts/Sofia Pro Black Italic.otf
+  String get sofiaProBlackItalic => 'assets/fonts/Sofia Pro Black Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Black.otf
+  String get sofiaProBlack => 'assets/fonts/Sofia Pro Black.otf';
+
+  /// File path: assets/fonts/Sofia Pro Bold Condensed Italic.otf
+  String get sofiaProBoldCondensedItalic =>
+      'assets/fonts/Sofia Pro Bold Condensed Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Bold Condensed.otf
+  String get sofiaProBoldCondensed =>
+      'assets/fonts/Sofia Pro Bold Condensed.otf';
+
+  /// File path: assets/fonts/Sofia Pro Bold Italic.otf
+  String get sofiaProBoldItalic => 'assets/fonts/Sofia Pro Bold Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Bold.otf
+  String get sofiaProBold => 'assets/fonts/Sofia Pro Bold.otf';
+
+  /// File path: assets/fonts/Sofia Pro Extra Light Condensed Italic.otf
+  String get sofiaProExtraLightCondensedItalic =>
+      'assets/fonts/Sofia Pro Extra Light Condensed Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Extra Light Condensed.otf
+  String get sofiaProExtraLightCondensed =>
+      'assets/fonts/Sofia Pro Extra Light Condensed.otf';
+
+  /// File path: assets/fonts/Sofia Pro Extra Light Italic.otf
+  String get sofiaProExtraLightItalic =>
+      'assets/fonts/Sofia Pro Extra Light Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Extra Light.otf
+  String get sofiaProExtraLight => 'assets/fonts/Sofia Pro Extra Light.otf';
+
+  /// File path: assets/fonts/Sofia Pro Light Condensed Italic.otf
+  String get sofiaProLightCondensedItalic =>
+      'assets/fonts/Sofia Pro Light Condensed Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Light Condensed.otf
+  String get sofiaProLightCondensed =>
+      'assets/fonts/Sofia Pro Light Condensed.otf';
+
+  /// File path: assets/fonts/Sofia Pro Light Italic.otf
+  String get sofiaProLightItalic => 'assets/fonts/Sofia Pro Light Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Light.otf
+  String get sofiaProLight => 'assets/fonts/Sofia Pro Light.otf';
+
+  /// File path: assets/fonts/Sofia Pro Medium Condensed Italic.otf
+  String get sofiaProMediumCondensedItalic =>
+      'assets/fonts/Sofia Pro Medium Condensed Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Medium Condensed.otf
+  String get sofiaProMediumCondensed =>
+      'assets/fonts/Sofia Pro Medium Condensed.otf';
+
+  /// File path: assets/fonts/Sofia Pro Medium Italic.otf
+  String get sofiaProMediumItalic => 'assets/fonts/Sofia Pro Medium Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Medium.otf
+  String get sofiaProMedium => 'assets/fonts/Sofia Pro Medium.otf';
+
+  /// File path: assets/fonts/Sofia Pro Regular Condensed Italic.otf
+  String get sofiaProRegularCondensedItalic =>
+      'assets/fonts/Sofia Pro Regular Condensed Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Regular Condensed.otf
+  String get sofiaProRegularCondensed =>
+      'assets/fonts/Sofia Pro Regular Condensed.otf';
+
+  /// File path: assets/fonts/Sofia Pro Regular Italic.otf
+  String get sofiaProRegularItalic =>
+      'assets/fonts/Sofia Pro Regular Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Regular.otf
+  String get sofiaProRegular => 'assets/fonts/Sofia Pro Regular.otf';
+
+  /// File path: assets/fonts/Sofia Pro Semi Bold Condensed Italic.otf
+  String get sofiaProSemiBoldCondensedItalic =>
+      'assets/fonts/Sofia Pro Semi Bold Condensed Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Semi Bold Condensed.otf
+  String get sofiaProSemiBoldCondensed =>
+      'assets/fonts/Sofia Pro Semi Bold Condensed.otf';
+
+  /// File path: assets/fonts/Sofia Pro Semi Bold Italic.otf
+  String get sofiaProSemiBoldItalic =>
+      'assets/fonts/Sofia Pro Semi Bold Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Semi Bold.otf
+  String get sofiaProSemiBold => 'assets/fonts/Sofia Pro Semi Bold.otf';
+
+  /// File path: assets/fonts/Sofia Pro Soft Bold Italic.otf
+  String get sofiaProSoftBoldItalic =>
+      'assets/fonts/Sofia Pro Soft Bold Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Soft Bold.otf
+  String get sofiaProSoftBold => 'assets/fonts/Sofia Pro Soft Bold.otf';
+
+  /// File path: assets/fonts/Sofia Pro Soft Light Italic.otf
+  String get sofiaProSoftLightItalic =>
+      'assets/fonts/Sofia Pro Soft Light Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Soft Light.otf
+  String get sofiaProSoftLight => 'assets/fonts/Sofia Pro Soft Light.otf';
+
+  /// File path: assets/fonts/Sofia Pro Soft Medium Italic.otf
+  String get sofiaProSoftMediumItalic =>
+      'assets/fonts/Sofia Pro Soft Medium Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Soft Medium.otf
+  String get sofiaProSoftMedium => 'assets/fonts/Sofia Pro Soft Medium.otf';
+
+  /// File path: assets/fonts/Sofia Pro Soft Regular Italic.otf
+  String get sofiaProSoftRegularItalic =>
+      'assets/fonts/Sofia Pro Soft Regular Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Soft Regular.otf
+  String get sofiaProSoftRegular => 'assets/fonts/Sofia Pro Soft Regular.otf';
+
+  /// File path: assets/fonts/Sofia Pro Ultra Light Condensed Italic.otf
+  String get sofiaProUltraLightCondensedItalic =>
+      'assets/fonts/Sofia Pro Ultra Light Condensed Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Ultra Light Condensed.otf
+  String get sofiaProUltraLightCondensed =>
+      'assets/fonts/Sofia Pro Ultra Light Condensed.otf';
+
+  /// File path: assets/fonts/Sofia Pro Ultra Light Italic.otf
+  String get sofiaProUltraLightItalic =>
+      'assets/fonts/Sofia Pro Ultra Light Italic.otf';
+
+  /// File path: assets/fonts/Sofia Pro Ultra Light.otf
+  String get sofiaProUltraLight => 'assets/fonts/Sofia Pro Ultra Light.otf';
+
+  /// List of all assets
+  List<String> get values => [
+        sofiaProBlackCondensedItalic,
+        sofiaProBlackCondensed,
+        sofiaProBlackItalic,
+        sofiaProBlack,
+        sofiaProBoldCondensedItalic,
+        sofiaProBoldCondensed,
+        sofiaProBoldItalic,
+        sofiaProBold,
+        sofiaProExtraLightCondensedItalic,
+        sofiaProExtraLightCondensed,
+        sofiaProExtraLightItalic,
+        sofiaProExtraLight,
+        sofiaProLightCondensedItalic,
+        sofiaProLightCondensed,
+        sofiaProLightItalic,
+        sofiaProLight,
+        sofiaProMediumCondensedItalic,
+        sofiaProMediumCondensed,
+        sofiaProMediumItalic,
+        sofiaProMedium,
+        sofiaProRegularCondensedItalic,
+        sofiaProRegularCondensed,
+        sofiaProRegularItalic,
+        sofiaProRegular,
+        sofiaProSemiBoldCondensedItalic,
+        sofiaProSemiBoldCondensed,
+        sofiaProSemiBoldItalic,
+        sofiaProSemiBold,
+        sofiaProSoftBoldItalic,
+        sofiaProSoftBold,
+        sofiaProSoftLightItalic,
+        sofiaProSoftLight,
+        sofiaProSoftMediumItalic,
+        sofiaProSoftMedium,
+        sofiaProSoftRegularItalic,
+        sofiaProSoftRegular,
+        sofiaProUltraLightCondensedItalic,
+        sofiaProUltraLightCondensed,
+        sofiaProUltraLightItalic,
+        sofiaProUltraLight
+      ];
+}
+
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
@@ -160,14 +352,27 @@ class $AssetsIconsTopGen {
   /// File path: assets/icons/top/bg_top.gif
   AssetGenImage get bgTop => const AssetGenImage('assets/icons/top/bg_top.gif');
 
+  /// File path: assets/icons/top/bg_topCard.png
+  AssetGenImage get bgTopCard =>
+      const AssetGenImage('assets/icons/top/bg_topCard.png');
+
+  /// File path: assets/icons/top/bg_topCard2.png
+  AssetGenImage get bgTopCard2 =>
+      const AssetGenImage('assets/icons/top/bg_topCard2.png');
+
+  /// File path: assets/icons/top/bg_topCard3.png
+  AssetGenImage get bgTopCard3 =>
+      const AssetGenImage('assets/icons/top/bg_topCard3.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [bgTop];
+  List<AssetGenImage> get values => [bgTop, bgTopCard, bgTopCard2, bgTopCard3];
 }
 
 class Assets {
   Assets._();
 
   static const $AssetsSplashGen splash = $AssetsSplashGen();
+  static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
 }
 
