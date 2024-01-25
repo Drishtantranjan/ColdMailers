@@ -59,7 +59,7 @@ class _CustomBarWidgetState extends State<CustomBarWidget> {
                 )
                     : CircleAvatar(
                   backgroundImage:
-                  AssetImage(Assets.icons.home.dummyImage.path),
+                  AssetImage(Assets.images.home.dummyImage.path),
                   backgroundColor: Color(0xFFEEF3F8),
                   radius: 20,
                 ),

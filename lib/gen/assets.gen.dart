@@ -220,6 +220,12 @@ class $AssetsIconsGen {
   $AssetsIconsTopGen get top => const $AssetsIconsTopGen();
 }
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  $AssetsImagesHomeGen get home => const $AssetsImagesHomeGen();
+}
+
 class $AssetsIconsAuthGen {
   const $AssetsIconsAuthGen();
 
@@ -271,10 +277,6 @@ class $AssetsIconsAuthGen {
 class $AssetsIconsHomeGen {
   const $AssetsIconsHomeGen();
 
-  /// File path: assets/icons/home/dummy_image.jpg
-  AssetGenImage get dummyImage =>
-      const AssetGenImage('assets/icons/home/dummy_image.jpg');
-
   /// File path: assets/icons/home/ic_home.svg
   String get icHome => 'assets/icons/home/ic_home.svg';
 
@@ -316,7 +318,6 @@ class $AssetsIconsHomeGen {
 
   /// List of all assets
   List<dynamic> get values => [
-        dummyImage,
         icHome,
         icHomeAct,
         icResume,
@@ -368,12 +369,24 @@ class $AssetsIconsTopGen {
   List<AssetGenImage> get values => [bgTop, bgTopCard, bgTopCard2, bgTopCard3];
 }
 
+class $AssetsImagesHomeGen {
+  const $AssetsImagesHomeGen();
+
+  /// File path: assets/images/home/dummy_image.jpg
+  AssetGenImage get dummyImage =>
+      const AssetGenImage('assets/images/home/dummy_image.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [dummyImage];
+}
+
 class Assets {
   Assets._();
 
   static const $AssetsSplashGen splash = $AssetsSplashGen();
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
 class AssetGenImage {

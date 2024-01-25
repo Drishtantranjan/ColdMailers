@@ -3,6 +3,7 @@ import 'package:cold_mailing/gen/assets.gen.dart';
 import 'package:cold_mailing/src/top/presentation/widget/Card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../../../gen/colors.gen.dart';
 import '../../../dashboard/presentation/view/home.dart';
 
@@ -44,12 +45,18 @@ class _TopState extends State<Top> {
                   ),
                   Align(
                     alignment: Alignment.center,
-                    child: appTextS4("TOP VOICES")
+                    child: Text("TOP VOICES",style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                    ),)
                   ),
-                  10.verticalSpace,
+                  20.verticalSpace,
                   Padding(
                     padding: EdgeInsets.all(8),
-                    child : appTextS2("Google Developer Experts"),),
+                    child : Text("Google Developer Experts",style: GoogleFonts.poppins(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold
+                    ),)),
                   5.verticalSpace,
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 8.0,),
@@ -66,7 +73,7 @@ class _TopState extends State<Top> {
                             name: "Drishtant",
                             summary: "I am passionate flutter developer holding 1.5 years of experience",
                             avatarImage: AssetImage(
-                                Assets.icons.home.dummyImage.path),
+                                Assets.images.home.dummyImage.path),
                             imageProvider: AssetImage(
                                 Assets.icons.top.bgTopCard2.path),
                             child: Column(
@@ -83,7 +90,10 @@ class _TopState extends State<Top> {
                   10.verticalSpace,
                   Padding(
                     padding: EdgeInsets.all(8),
-                    child : appTextS1("FAANG Career Experts"),),
+                    child :  Text("FAANG Career Experts",style: GoogleFonts.poppins(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold
+                    ),)),
                   5.verticalSpace,
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 8.0,),
@@ -100,7 +110,7 @@ class _TopState extends State<Top> {
                             name: "Drishtant",
                             summary: "I am passionate flutter developer holding 1.5 years of experience",
                             avatarImage: AssetImage(
-                                Assets.icons.home.dummyImage.path),
+                                Assets.images.home.dummyImage.path),
                             imageProvider: AssetImage(
                                 Assets.icons.top.bgTopCard.path),
                             child: Column(
@@ -114,9 +124,13 @@ class _TopState extends State<Top> {
                       },
                     ),
                   ),
+                  5.verticalSpace,
                   Padding(
                     padding: EdgeInsets.all(8),
-                    child : appTextS2("Early Career Experts"),),
+                    child : Text("Early Career Experts",style: GoogleFonts.poppins(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold
+                    ),)),
                   5.verticalSpace,
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 8.0,),
@@ -133,7 +147,7 @@ class _TopState extends State<Top> {
                             name: "Drishtant",
                             summary: "I am passionate flutter developer holding 1.5 years of experience",
                             avatarImage: AssetImage(
-                                Assets.icons.home.dummyImage.path),
+                                Assets.images.home.dummyImage.path),
                             imageProvider: AssetImage(
                                 Assets.icons.top.bgTopCard3.path),
                             child: Column(

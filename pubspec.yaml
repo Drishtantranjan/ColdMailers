@@ -14,6 +14,7 @@ dependencies:
   text_divider: ^1.0.0
   stacked: ^2.0.0
   video_player: ^2.3.0
+  google_fonts: ^6.1.0
   cupertino_icons: ^1.0.2
   flutter_gen: ^5.4.0
   remixicon: ^1.0.0
@@ -51,6 +52,7 @@ flutter:
     - assets/icons/auth/
     - assets/icons/home/
     - assets/icons/top/
+    - assets/images/home/
     - assets/Splash/
     - assets/fonts/
   fonts:
