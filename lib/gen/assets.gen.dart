@@ -224,6 +224,7 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   $AssetsImagesHomeGen get home => const $AssetsImagesHomeGen();
+  $AssetsImagesTemplateGen get template => const $AssetsImagesTemplateGen();
 }
 
 class $AssetsIconsAuthGen {
@@ -378,6 +379,34 @@ class $AssetsImagesHomeGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [dummyImage];
+}
+
+class $AssetsImagesTemplateGen {
+  const $AssetsImagesTemplateGen();
+
+  /// File path: assets/images/template/bg_CoverLetter.png
+  AssetGenImage get bgCoverLetter =>
+      const AssetGenImage('assets/images/template/bg_CoverLetter.png');
+
+  /// File path: assets/images/template/bg_Gmail.png
+  AssetGenImage get bgGmail =>
+      const AssetGenImage('assets/images/template/bg_Gmail.png');
+
+  /// File path: assets/images/template/bg_Linkedin.png
+  AssetGenImage get bgLinkedinPng =>
+      const AssetGenImage('assets/images/template/bg_Linkedin.png');
+
+  /// File path: assets/images/template/bg_Linkedin.webp
+  AssetGenImage get bgLinkedinWebp =>
+      const AssetGenImage('assets/images/template/bg_Linkedin.webp');
+
+  /// File path: assets/images/template/bg_Resume.png
+  AssetGenImage get bgResume =>
+      const AssetGenImage('assets/images/template/bg_Resume.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values =>
+      [bgCoverLetter, bgGmail, bgLinkedinPng, bgLinkedinWebp, bgResume];
 }
 
 class Assets {

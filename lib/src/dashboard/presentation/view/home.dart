@@ -2,6 +2,7 @@ import 'package:cold_mailing/src/dashboard/presentation/view/HomePage.dart';
 import 'package:cold_mailing/src/top/presentation/views/top.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../template/presentation/views/template.dart';
 import '../widgets/appBar.dart';
 import '../../../../gen/colors.gen.dart';
 import '../widgets/bottomNavBar.dart';
@@ -84,16 +85,13 @@ class _HomeState extends State<Home> {
 
   Widget _getBodyContent(int currentIndex) {
     if (isTextFieldTapped) {
-      // If TextField is tapped, return an empty Container to cover the body
       return RecentPage();
     } else {
       switch (currentIndex) {
         case 0:
           return HomePage();
         case 1:
-          return const Center(
-            child: Text('Template Page'),
-          );
+          return template();
         case 2:
           return Top();
         case 3:

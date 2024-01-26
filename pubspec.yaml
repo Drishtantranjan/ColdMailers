@@ -53,6 +53,7 @@ flutter:
     - assets/icons/home/
     - assets/icons/top/
     - assets/images/home/
+    - assets/images/template/
     - assets/Splash/
     - assets/fonts/
   fonts:
