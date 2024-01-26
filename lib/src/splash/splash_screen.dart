@@ -1,4 +1,5 @@
 import 'package:cold_mailing/gen/assets.gen.dart';
+import 'package:cold_mailing/src/auth/presentation/views/login_screen.dart';
 
 import 'package:cold_mailing/src/dashboard/presentation/view/home.dart';
 import 'package:cold_mailing/src/onboarding/presentation/views/onboarding_screen.dart';

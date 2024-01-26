@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    // After 2 seconds, update the state to hide the shimmer effect
+
     Future.delayed(Duration(seconds: 2), () {
       if (mounted) {
         setState(() {
@@ -75,7 +75,9 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(0)
                     ),
                   ),
+
                 );
+
               },
             ),
           ],

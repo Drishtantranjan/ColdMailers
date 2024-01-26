@@ -21,89 +21,95 @@ class _RecentPageState extends State<RecentPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.background2,
-      resizeToAvoidBottomInset: false,
-      body: SingleChildScrollView(
-        child:  Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              color: AppColors.white,
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Padding(
-                    padding:  EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Recent',
-                          style: TextStyle(
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.bold,
+    return GestureDetector(
+      onTap: (){
+        FocusScope.of(context).unfocus();
+      },
+      child: Scaffold(
+        backgroundColor: AppColors.background2,
+        resizeToAvoidBottomInset: false,
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child:  Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                color: AppColors.white,
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Padding(
+                      padding:  EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Recent',
+                            style: TextStyle(
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        Text(
-                          'See all',
-                          style: TextStyle(
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.w400,
+                          Text(
+                            'See all',
+                            style: TextStyle(
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-               5.verticalSpace,
-                  if (recentSearches.isNotEmpty)
-                    Column(
-                      children: recentSearches.map((search) {
-                        return ListTile(
-                          title: Row(
-                            children: [
-                              Icon(Icons.history,size: 15,),
-                              10.horizontalSpace,
-                              Text(search,style: TextStyle(
-                                fontSize: 15
+                 5.verticalSpace,
+                    if (recentSearches.isNotEmpty)
+                      Column(
+                        children: recentSearches.map((search) {
+                          return ListTile(
+                            title: Row(
+                              children: [
+                                Icon(Icons.history,size: 15,),
+                                10.horizontalSpace,
+                                Text(search,style: TextStyle(
+                                  fontSize: 15
 
-                              ),),
-                            ],
-                          ),
-                          onTap: () {
-                            // Handle the tap on a recent search
-                            print('Tapped on: $search');
-                          },
-                        );
-                      }).toList(),
+                                ),),
+                              ],
+                            ),
+                            onTap: () {
+                              // Handle the tap on a recent search
+                              print('Tapped on: $search');
+                            },
+                          );
+                        }).toList(),
+                      )
+                    else
+                      Center(
+                        child: Text('No recent searches.'),
+                      ),
+                  ],
+                ),
+              ),
+              10.verticalSpace,
+              Container(
+                color: AppColors.white,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    10.verticalSpace,
+                    Padding(
+                      padding:  EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Text("Today's news and views",style: GoogleFonts.roboto(
+                        fontWeight: FontWeight.w500
+                      ),),
                     )
-                  else
-                    Center(
-                      child: Text('No recent searches.'),
-                    ),
-                ],
-              ),
-            ),
-            10.verticalSpace,
-            Container(
-              color: AppColors.white,
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  10.verticalSpace,
-                  Padding(
-                    padding:  EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Text("Today's news and views",style: GoogleFonts.roboto(
-                      fontWeight: FontWeight.w500
-                    ),),
-                  )
-                ],
-              ),
-            )
-          ],
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
