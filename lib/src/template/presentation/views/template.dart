@@ -43,12 +43,12 @@ class template extends StatelessWidget {
                 child: Column(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
                           height: MediaQuery.of(context).size.height * 0.1,
-                          width: MediaQuery.of(context).size.width *
-                              0.473, // Adjusted width
+                          width: MediaQuery.of(context).size.width- MediaQuery.of(context).size.width*0.55,
+                              // Adjusted width
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
@@ -63,8 +63,7 @@ class template extends StatelessWidget {
                         3.horizontalSpace,
                         Container(
                           height: MediaQuery.of(context).size.height * 0.1,
-                          width: MediaQuery.of(context).size.width *
-                              0.473, // Adjusted width
+                          width: MediaQuery.of(context).size.width- MediaQuery.of(context).size.width*0.55,
                           decoration: BoxDecoration(
 
                             image: DecorationImage(
@@ -77,13 +76,13 @@ class template extends StatelessWidget {
                         ),
                       ],
                     ),
-                    5.verticalSpace,
+                    10.verticalSpace,
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
                           height: MediaQuery.of(context).size.height * 0.1,
-                          width: MediaQuery.of(context).size.width *
-                              0.473, // Adjusted width
+                          width: MediaQuery.of(context).size.width- MediaQuery.of(context).size.width*0.55,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(Assets.images.template.bgResume.path),
@@ -96,8 +95,7 @@ class template extends StatelessWidget {
                         2.5.horizontalSpace,
                         Container(
                           height: MediaQuery.of(context).size.height * 0.1,
-                          width: MediaQuery.of(context).size.width *
-                              0.473, // Adjusted width
+                          width: MediaQuery.of(context).size.width- MediaQuery.of(context).size.width*0.55,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
