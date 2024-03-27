@@ -74,9 +74,9 @@ class _HomePageState extends State<HomePage> {
                                       decoration: BoxDecoration(
                                           color: AppColors.form,
                                           image: DecorationImage(
-                                            image: AssetImage(Assets.icons.auth.icLinkedin.path),
-                                              fit: BoxFit.contain
-                                          ),
+                                              image: AssetImage(
+                                                  Assets.icons.auth.icLinkedin),
+                                              fit: BoxFit.contain),
                                           borderRadius:
                                               BorderRadius.circular(5)),
                                     ),
